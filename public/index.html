@@ -3,7 +3,7 @@
   <head>
     <title>CLS 217 Pottery Scans</title>
     <meta name="description" content="Hello, WebVR! - A-Frame">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
@@ -11,16 +11,17 @@
         <a-asset-item id="obj1" src="wideboy.obj"></a-asset-item>
         <a-asset-item id="mtl1" src="wideboy.mtl"></a-asset-item>
         
-        <a-asset-item id="gltf" src="scene.gltf"></a-asset-item>
+        <!-- RENDERED -->
+        <a-asset-item id="gltf" src="vase.gltf"></a-asset-item>
        </a-assets>
       
       <a-obj-model id="test1" rotation = "0 90 0" scale="0.01 0.01 0.01" position="1.4 -0.01 -12" src ="#obj1" mtl="#mtl1" dynamic-body click-drag>
       </a-obj-model>
       
-      <a-gltf-model rotation = "0 90 0" scale="0.3 0.1 0.3" position=".774 0 -6" src="#gltf"></a-gltf-model>
+      <a-gltf-model rotation = "0 0 0" scale=".1 .1 .1" position="1.4 .5 -10" src="#gltf"></a-gltf-model>
 
       
-      <a-sky src="https://66.media.tumblr.com/aae463e73e117176d601d7ea1c1e97e2/tumblr_pguxckF6zg1vetbaeo1_540.png"></a-sky>
+      <a-sky color="#FF9E55"></a-sky>
     </a-scene>
   </body>
 </html>
