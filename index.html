@@ -8,55 +8,17 @@
   <body>
     <a-scene>
       <a-assets>
-        <a-asset-item id="obj1" src="https://cdn.glitch.com/81f6e8d1-c891-43ef-8d08-aab8781327e8%2FLOON3749_v6_LOD2.obj?1541220406856"></a-asset-item>
-        <a-asset-item id="mtl1" src="https://cdn.glitch.com/81f6e8d1-c891-43ef-8d08-aab8781327e8%2FLOON3749_v6_LOD2.mtl?1541220406569"></a-asset-item>
+        <a-asset-item id="obj1" src="wideboy.obj"></a-asset-item>
+        <a-asset-item id="mtl1" src="wideboy.mtl"></a-asset-item>
         
-        <a-asset-item id="sofa_obj" src="https://cdn.glitch.com/81f6e8d1-c891-43ef-8d08-aab8781327e8%2FVKGL1664_v6_LOD2.obj?1541223561591"></a-asset-item>
-        <a-asset-item id="sofa_mtl" src="https://cdn.glitch.com/81f6e8d1-c891-43ef-8d08-aab8781327e8%2FVKGL1664_v6_LOD2.mtl?1541223560929"></a-asset-item>
-      </a-assets>
+        <a-asset-item id="gltf" src="scene.gltf"></a-asset-item>
+       </a-assets>
       
       <a-obj-model id="test1" rotation = "0 90 0" scale="0.01 0.01 0.01" position="1.4 -0.01 -12" src ="#obj1" mtl="#mtl1" dynamic-body click-drag>
       </a-obj-model>
       
-      <!--a-text position="0 2.5 -2" align="center"  value="You belong in Z-Haus" color="#006685"></a-text-->
-      <a-text position="0 2.5 -2" align="center"  value="** UNDER CONSTRUCTION **" color="#006685"></a-text>
-      <a-text position="1 1.5 -.75" align="center"  value="*" color="#BB6685"></a-text>
-      <a-text position="-5 1.5 -.5" rotation="0 90 0" align="center"  value="*" color="#BB6611"></a-text>
-      <a-text position="0 1 -1" rotation="0 20 0" align="center"  value="*" color="#229611"></a-text>
-      <a-text position="2 1 -1" rotation="0 -20 0" align="center"  value="*" color="#A216F1"></a-text>
-      <a-text position="5 2.5 -1.5" rotation="0 -20 0" align="center"  value="*" color="#F276F1"></a-text>
-      <a-torus-knot color="#B90F03" position="0 5 0" radius-tubular="0.05" p="7"></a-torus-knot>
-      
-      <!-- to be placed and hued  -->
-      <a-text position="-1 3.5 -1.5" rotation="0 30 0" align="center"  value="*" color="#127641"></a-text>
-      
-      <!-- reddish -->
-      <a-text position="-5 2.5 -.5" rotation="0 -20 0" align="center"  value="*" color="#F276F1"></a-text>
-      <a-text position="-5 2.5 0" rotation="0 -20 0" align="center"  value="*" color="#F27601"></a-text>
-      <a-text position="-5 2.5 .5" rotation="0 -20 0" align="center"  value="*" color="#F20621"></a-text>
-      
-      <!-- greenish -->
-      <a-text position="-2 2 -1" rotation="0 30 0" align="center"  value="*" color="#227621"></a-text>
-      <a-text position="0 2 .5" rotation="0 -20 0" align="center"  value="*" color="#62F661"></a-text>
-      
-      <!-- bluish -->
-      <a-text position="5 1.5 -.5" rotation="0 -20 0" align="center"  value="*" color="#0276F1"></a-text>
-      <a-text position="5 .5 0" rotation="0 -40 0" align="center"  value="*" color="#4276F1"></a-text>
-      <a-text position="5 1.5 1" rotation="0 -100 0" align="center"  value="*" color="#7276F1"></a-text>
-      <a-text position="5 2.5 2" rotation="0 -100 0" align="center"  value="*" color="#427661"></a-text>
-      <a-text position="5 1.5 5" rotation="0 -100 0" align="center"  value="*" color="#72E641"></a-text>
-      <a-text position="4 2.5 6" rotation="0 -180 0" align="center"  value="*" color="#427661"></a-text>
-      <a-text position="3 1.5 7" rotation="0 180 0" align="center"  value="*" color="#0286A1"></a-text>      
-      <a-text position="1 2 5" rotation="0 180 0" align="center"  value="*" color="#227621"></a-text>
-      
-      <a-text position="-5 3.5 -.5" rotation="0 20 0" align="center"  value="*" color="#0276F1"></a-text>
-      <a-text position="-5 .5 0" rotation="0 40 0" align="center"  value="*" color="#4276F1"></a-text>
-      <a-text position="-5 4.5 1" rotation="0 100 0" align="center"  value="*" color="#7276F1"></a-text>
-      <a-text position="-5 2.5 2" rotation="0 100 0" align="center"  value="*" color="#427661"></a-text>
-      <a-text position="-5 1.5 5" rotation="0 100 0" align="center"  value="*" color="#72E641"></a-text>
-      <a-text position="-4 2.5 6" rotation="0 180 0" align="center"  value="*" color="#427661"></a-text>
-      <a-text position="-3 1.5 7" rotation="0 180 0" align="center"  value="*" color="#0286A1"></a-text>      
-      <a-text position="-1 2 5" rotation="0 180 0" align="center"  value="*" color="#227621"></a-text>
+      <a-gltf-model rotation = "0 90 0" scale="0.3 0.1 0.3" position=".774 0 -6" src="#gltf"></a-gltf-model>
+
       
       <a-sky src="https://66.media.tumblr.com/aae463e73e117176d601d7ea1c1e97e2/tumblr_pguxckF6zg1vetbaeo1_540.png"></a-sky>
     </a-scene>
