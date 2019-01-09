@@ -5,12 +5,15 @@
     <meta name="description" content="Hello, WebVR! - A-Frame">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <!-- Note to self: find 360 photo of a museum looking room. -->
+    <!-- obj > gltf: http://52.4.31.236/convertmodel.html -->
   </head>
   <body>
     <a-scene>
       <a-assets>
-        <a-asset-item id="kylix06" src="kylix6.gltf"></a-asset-item>
-        <!-- RENDERED -->
+  
+        <!-- Wayfair furniture. yes, this is real furniture you can buy. -->
+        
+        <!-- All of these scanned by the Imaging Center, thanks -->
         <a-asset-item id="gltf" src="vase.gltf"></a-asset-item>
         <a-asset-item id="wideboyy" src="wideboy.gltf"></a-asset-item>
         <a-asset-item id="bigboy" src="bigboy.gltf"></a-asset-item>
@@ -18,19 +21,18 @@
        </a-assets>
       
       <a-gltf-model id="testvase1" rotation = "0 0 0" scale=".1 .1 .1"
-                    position="1.4 .5 -10" src="#gltf"></a-gltf-model>
+                    position="1.4 1.5 -6" src="#gltf"></a-gltf-model>
       
-      <a-gltf-model rotation = "0 0 180" scale="5 5 5" position="-1.4 .5 -5"
+      <a-gltf-model rotation = "0 90 180" scale="5 5 5" position="2.4 3.7 -.5"
                     src="#wideboyy"></a-gltf-model>
       
-      <a-gltf-model rotation = "0 0 180" scale="5 5 5" position="-1.4 2.5 -3.5" 
+      <a-gltf-model rotation = "0 90 180" scale="5 5 5" position="-4 3.5 -1.5" 
                     src="#bigboy"></a-gltf-model>
       
-      <a-gltf-model rotation = "0 45 180" scale="5 5 5" position="-.4 2.5 -4.5"
+      <a-gltf-model rotation = "0 45 180" scale="5 5 5" position="-.1 3.8 1.4"
                     src="#littleguy"></a-gltf-model>
       
-      <a-gltf-model rotation = "0 45 180" scale="5 5 5" position="-2.4 3 -4.5"
-                    src="#kylix06"></a-gltf-model>
+      <a-plane rotation="-90 0 0" height="100" width="100" metalness="0.3"></a-plane>
       
       <a-sky color="#FF9E55"></a-sky>
     </a-scene>
