@@ -6,35 +6,89 @@
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <!-- Note to self: find 360 photo of a museum looking room. -->
     <!-- obj > gltf: http://52.4.31.236/convertmodel.html -->
+    <!-- click object for rotation, click stand for audio... -->
   </head>
   <body>
     <a-scene>
       <a-assets>
   
         <!-- Wayfair furniture. yes, this is real furniture you can buy. -->
+        <a-asset-item id="stand1" src="ATGR2663_v6_LOD2.gltf"></a-asset-item>
+        <a-asset-item id="stand2" src="BL6453_v6_LOD2.gltf"></a-asset-item>
         
-        <!-- All of these scanned by the Imaging Center, thanks -->
+        <!-- All of these scanned by the Imaging Center and also fellow Smithies, thanks -->
+        
         <a-asset-item id="gltf" src="vase.gltf"></a-asset-item>
+        
+        <!-- Black Glazed Kylix
+        https://library.artstor.org/#/asset/SS37318_37318_37676347;prevRouteTS=1547578788573
+        -->
         <a-asset-item id="wideboyy" src="wideboy.gltf"></a-asset-item>
+        
+        <!-- Black Figure Bowl
+        https://library.artstor.org/#/asset/SS37318_37318_37676377;prevRouteTS=1547578298330
+        -->
         <a-asset-item id="bigboy" src="bigboy.gltf"></a-asset-item>
+        
+        <!-- Black Figure Kylix
+        https://library.artstor.org/#/asset/SS37318_37318_37676349;prevRouteTS=1547656855070
+        -->
         <a-asset-item id="littleguy" src="littleguy.gltf"></a-asset-item>
-       </a-assets>
+        
+        <!-- audio stuff coming soon!! -->
+        <!-- audio id="move-sound" src="https://cdn.glitch.com/81f6e8d1-c891-43ef-8d08-aab8781327e8%2Fforest%20sigh%20whack.mp3?1541280508056" preload="auto"></audio-->
+       
+      </a-assets>
       
-      <a-gltf-model id="testvase1" rotation = "0 0 0" scale=".1 .1 .1"
-                    position="1.4 1.5 -6" src="#gltf"></a-gltf-model>
+      <a-entity camera look-controls wasd-controls position="0 2 0">
+      </a-entity>
       
-      <a-gltf-model rotation = "0 90 180" scale="5 5 5" position="2.4 3.7 -.5"
-                    src="#wideboyy"></a-gltf-model>
+      <a-camera position="0 1 0">
+        <a-cursor color="#FF0000"></a-cursor>
+      </a-camera>
       
-      <a-gltf-model rotation = "0 90 180" scale="5 5 5" position="-4 3.5 -1.5" 
-                    src="#bigboy"></a-gltf-model>
+      <a-gltf-model id="testvase1" rotation = "0 0 0" scale=".05 .05 .05"
+                    position=".7 1 -3" src="#gltf">
+        <a-animation attribute="rotation" dur="10000" 
+                     from= "0 0 0" to="0 360 0" begin="click"></a-animation>
+      </a-gltf-model>
       
-      <a-gltf-model rotation = "0 45 180" scale="5 5 5" position="-.1 3.8 1.4"
-                    src="#littleguy"></a-gltf-model>
+      <a-entity id="wideboy" sound="src: url(https://cdn.glitch.com/c68ca67d-e783-45d1-90d0-35b99ccf9361%2FVocaroo_s0wuBgx8YX3L.mp3?1547136709764); on: click">
+        <a-gltf-model rotation = "0 90 180" scale="5 5 5" position="2.4 2.8 -.5"
+                      src="#wideboyy" id="wideboy_cup">
+          <a-animation attribute="rotation" dur="10000" 
+                     from= "0 90 180" to="0 450 180" begin="click"></a-animation>
+        </a-gltf-model>
+
+        <a-gltf-model rotation = "0 180 0" scale=".025 .025 .025" position="3 -.1 .2" 
+                        src="#stand1" id="wideboy_stand"></a-gltf-model>
+      </a-entity>
+        
+      <a-entity id="bigboyy">
+        <a-gltf-model rotation = "0 90 180" scale="5 5 5" position="-4 3.35 -1.5" 
+                      src="#bigboy" id="bigboy_cup">
+          <a-animation attribute="rotation" dur="10000" 
+                     from= "0 90 180" to="0 450 180" begin="click"></a-animation>
+        </a-gltf-model>
+
+        <a-gltf-model rotation = "0 180 0" scale=".025 .025 .025" position="-3.25 -.1 -0.5" 
+                      src="#stand1" id="bigboy_stand"></a-gltf-model>
+        
+      </a-entity>
+        
+      <a-gltf-model rotation = "0 45 180" scale="5 5 5" position="0 3.35 1.4"
+                    src="#littleguy" id="littleguyy">
+        <a-animation attribute="rotation" dur="10000" 
+                     from= "0 45 180" to="0 405 180" begin="click"></a-animation>
+      </a-gltf-model>
+      <a-gltf-model rotation = "0 180 0" scale=".02 .02 .02" position="-.1 -.1 2.5" 
+                        src="#stand2" id="littleguy_stand"></a-gltf-model>
       
-      <a-plane rotation="-90 0 0" height="100" width="100" metalness="0.3"></a-plane>
+      <a-plane src="https://cdn.glitch.com/c68ca67d-e783-45d1-90d0-35b99ccf9361%2FSeamless%20cream%20marble%20cloud%20texture.jpg?1547146644573" 
+               rotation="-90 0 0" height="100" width="100" metalness=".3"></a-plane>
       
-      <a-sky color="#FF9E55"></a-sky>
+      <a-sky src="https://cdn.glitch.com/c68ca67d-e783-45d1-90d0-35b99ccf9361%2Fimage.png?1547146338665"
+             shader="standard" material="emissive: #f90; emissiveIntensity: .25"></a-sky>
     </a-scene>
   </body>
 </html>
